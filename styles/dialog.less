@@ -1,0 +1,65 @@
+@border-color: #E2E2E2;
+@background-color: #EDEDED;
+@overlay-color: #000000;
+.baufilead-dialog-content-container {
+    .baufilead-dialog-content {
+        background-color: @background-color;
+    }
+    background-color: @background-color;
+    border-color: @border-color;
+
+    @maxDialogBreite: 1024px;
+    @padding: 10px;
+    border-style: solid;
+    border-width: 1px;
+    height: auto;
+    padding: @padding;
+    position: relative;
+
+    @media @desktop {
+        margin: 40px auto;
+        max-width: @maxDialogBreite - (2 * @padding);
+    }
+}
+@panelAbstand: 20px;
+@desktop: ~"only screen and (min-width: 820px)";
+.baufilead-dialog-overlay {
+    background-color: fadeout(@overlay-color, 40%);
+    bottom: 0;
+    display: block;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 110000;
+}
+.baufilead-dialog-scroll-container {
+    bottom: 0;
+    display: block;
+    left: 0;
+    overflow-y: scroll;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 110001;
+}
+.baufilead-dialog-close-button {
+    cursor: pointer;
+    float: right;
+    font-size: 24px;
+}
+.baufilead-html-manipulation-fuer-dialog {
+    position: static;
+    body {
+        overflow: hidden;
+        position: static;
+    }
+}
+.baufilead-html-manipulation-fuer-dialog-ios {
+    html&, body {
+        min-width: 0;
+    }
+    body {
+        background-color: fadeout(@overlay-color, 40%);
+    }
+}

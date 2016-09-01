@@ -1,0 +1,57 @@
+.baufilead-dialog-content-container {
+  background-color: #ededed;
+  border-color: #e2e2e2;
+  border-style: solid;
+  border-width: 1px;
+  height: auto;
+  padding: 10px;
+  position: relative;
+}
+.baufilead-dialog-content-container .baufilead-dialog-content {
+  background-color: #ededed;
+}
+@media only screen and (min-width: 820px) {
+  .baufilead-dialog-content-container {
+    margin: 40px auto;
+    max-width: 1004px;
+  }
+}
+.baufilead-dialog-overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  bottom: 0;
+  display: block;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 110000;
+}
+.baufilead-dialog-scroll-container {
+  bottom: 0;
+  display: block;
+  left: 0;
+  overflow-y: scroll;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 110001;
+}
+.baufilead-dialog-close-button {
+  cursor: pointer;
+  float: right;
+  font-size: 24px;
+}
+.baufilead-html-manipulation-fuer-dialog {
+  position: static;
+}
+.baufilead-html-manipulation-fuer-dialog body {
+  overflow: hidden;
+  position: static;
+}
+html.baufilead-html-manipulation-fuer-dialog-ios,
+.baufilead-html-manipulation-fuer-dialog-ios body {
+  min-width: 0;
+}
+.baufilead-html-manipulation-fuer-dialog-ios body {
+  background-color: rgba(0, 0, 0, 0.6);
+}
