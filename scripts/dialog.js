@@ -3,11 +3,11 @@ $(document).ready(function () {
   var modalDialogManipulationCssClass;
   var originalViewportContent;
 
-  setupModalDialog()
+  setupModalDialog();
 
   function setupModalDialog() {
     modalDialogManipulationCssClass = getModalDialogManipulationClass();
-    $('html').addClass(getModalDialogManipulationClass)
+    $('html').addClass(getModalDialogManipulationClass);
 
     originalViewportContent = getOrCreateViewportMetaTag().attr('content');
     getOrCreateViewportMetaTag().attr('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0');
